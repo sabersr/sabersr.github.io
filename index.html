@@ -1,32 +1,1074 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-    />
-    <title>Oscars</title>
-    <meta property="og:title" content="Oscars" />
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
     <meta charset="utf-8" />
-    <meta property="og:type" content="article" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <meta property="og:description" content="A3" />
-    <meta property="description" content="A3" />
+    <!-- D3 Script -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
-    <link rel="stylesheet" href="static/idyll_styles.css" />
-  </head>
-  <body>
-    <div id="idyll-mount"><div data-reactroot=""><div class="idyll-root"><div class=" idyll-text-container"></div><div class="article-header" style="background:#222222;color:#ffffff"><h1 class="hed">Oscars</h1><h2 class="dek">Is it really white-dominated, or just stereotype?</h2><div class="byline">By: <a href="https://idyll-lang.org">Jerry Kou, Jiazhi Yang &amp; Donyaporn Kittivatcharapong</a></div><div class="idyll-pub-date">Fri Oct 23 2020</div></div><div class=" idyll-text-container"><h2 id="introduction">Introduction</h2><p>The Academic Award (Oscar) has always been criticized for its lack of diversity.
-The winners are usually from a homogeneous group that excludes minorities from winning the awards.
-On the other hand, in recent years,
-people claim that the idea of political correctness has influenced the choices of the winners.
-Previously underrepresented groups have been included in the Oscar community for various reasons.</p><p>As a result, we want to address the demographic stereotypes for Oscar winners
-and answer the question of whether race, religion or other demographic factors will influence the decision of the awards.
-Throughout history, it seems that the winners of Best Actor/Actress/Supporting Actor/Supporting Actress/ Director are predominantly white.
-Also, the winners for Best Director seem to be mostly males. By analyzing the winners throughout the years,
-we try to testify the veracity of this stereotype and to see if there is any improvement or degeneration of the inclusiveness of the award.</p></div><div class="idyll-scroll" id="idyll-scroll-0" style="position:relative"><div class=" idyll-text-container"><div class="idyll-scroll-text"><div class="idyll-step "><h2 id="what-you-may-think-about-oscar-winners">What you may think about Oscar winners</h2><p> Can you remember an Oscar winner of Best Actor and Actress, Supporting Actor and Actress, and Director that is not white?</p><p>OK, you may come up with Halle Berry (Monster’s Ball, 2001, Best Actress), or Ang Lee (Brokeback Mountain, 2005 &amp; Life of Pi, 2012, Best Director). What else?</p><div></div><p> Racial Demography of Oscar winners in 1940s</p><p>From the five important awards for acting and directing, is the pie chart above your impression of Oscar winners of these awards each year?</p></div><div class="idyll-step "><h2 id="racial-dynamics-of-oscar">Racial Dynamics of Oscar</h2><p><p>Your intuition is right. Oscar winners of these awards are predominately white. We summarize the racial composition data through decades for you.</p><input type="range" value="1920" min="1920" max="2010" step="10"/><span class="idyll-display">1920</span>s</p><div></div><p>For most, it seems that only one-fourth of winners are people of color, which is disproportionate to the racial composition of the film industry.</p></div><div class="idyll-step "><p>Click the award to see each year’s winner. Do you have the feeling that the race column is almost occupied with “White” for any award you could choose?</p><div><label><input type="radio" checked="" value="Best Director" name="0"/>Best Director</label><label><input type="radio" value="Best Actor" name="0"/>Best Actor</label><label><input type="radio" value="Best Actress" name="0"/>Best Actress</label><label><input type="radio" value="Best Supporting Actor" name="0"/>Best Supporting Actor</label><label><input type="radio" value="Best Supporting Actress" name="0"/>Best Supporting Actress</label></div><div class="ReactTable table "><div class="rt-table" role="grid"><div class="rt-thead -header" style="min-width:400px"><div class="rt-tr" role="row"><div class="rt-th rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1" style="flex:100 0 auto;width:100px"><div class="rt-resizable-header-content">person</div><div class="rt-resizer"></div></div><div class="rt-th rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1" style="flex:100 0 auto;width:100px"><div class="rt-resizable-header-content">race_ethnicity</div><div class="rt-resizer"></div></div><div class="rt-th rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1" style="flex:100 0 auto;width:100px"><div class="rt-resizable-header-content">year_of_award</div><div class="rt-resizer"></div></div><div class="rt-th rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1" style="flex:100 0 auto;width:100px"><div class="rt-resizable-header-content">movie</div><div class="rt-resizer"></div></div></div></div><div class="rt-tbody" style="min-width:400px"><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -odd" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Lewis Milestone</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1927</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Two Arabian Knights</div></div></div><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -even" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Frank Lloyd</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1930</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">The Divine Lady</div></div></div><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -odd" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Lewis Milestone</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1931</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">All Quiet on the Western Front</div></div></div><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -even" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Norman Taurog</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1932</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Skippy</div></div></div><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -odd" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Frank Borzage</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1933</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Bad Girl</div></div></div><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -even" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Frank Lloyd</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1934</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Cavalcade</div></div></div><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -odd" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Frank Capra</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1935</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">It Happened One Night</div></div></div><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -even" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">John Ford</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1936</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">The Informer</div></div></div><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -odd" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Frank Capra</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1937</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Mr. Deeds Goes to Town</div></div></div><div class="rt-tr-group" role="rowgroup"><div class="rt-tr -even" role="row"><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">Leo McCarey</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">White</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">1938</div><div class="rt-td" role="gridcell" style="flex:100 0 auto;width:100px">The Awful Truth</div></div></div></div></div><div class="pagination-bottom"><div class="-pagination"><div class="-previous"><button type="button" disabled="" class="-btn">Previous</button></div><div class="-center"><span class="-pageInfo">Page<!-- --> <span class="-currentPage">1</span> <!-- -->of<!-- --> <span class="-totalPages">10</span></span></div><div class="-next"><button type="button" class="-btn">Next</button></div></div></div><div class="-loading"><div class="-loading-inner">Loading...</div></div></div><p>This is also the dataset we use to analyze the demographic statistics of Oscar winners.</p></div><div class="idyll-step "><p>Here is the racial trend of Oscar winners of people of color when the award was founded.</p><div></div><p>Compared with the total number of 441 winners, can you see the difference?</p><p>But it also seems that more and more people of color are winning recently. The slope becomes stepper.</p></div></div></div></div><div class=" idyll-text-container"><h2 id="nationality">Nationality</h2><p>Besides racial identity, let’s turn our focus on the nationality of winners. Does the location of birth also tell us something?
-Since the United States has more than half the winners, we create the extra United States map to see where they come from.</p><p><div class="idyll-stepper" style="position:relative;height:500px"><div class="idyll-step-graphic"><div><img src="static/images/0.png" idyll="[object Object]"/></div></div><div class="idyll-step-content"><div class="idyll-step "><a href="">The distribution of winners around the world</a></div></div><div class="idyll-stepper-control"><div class="idyll-stepper-control-button idyll-stepper-control-button-previous">←</div><div class="idyll-stepper-control-button idyll-stepper-control-button-next">→</div></div></div>
-NYC has more winners than California, where Hollywood is in. Interesting!</p><h2 id="conclusion">Conclusion</h2><p>From what we discussed above, we could clearly confirm the stereotype that Oscar winners are predominately white. Due to the time and other issues, the religion and sexual orientation part that we want to further talk about and analyze are not included currently. From next year, Oscar would consider more about inclusiveness. Would the racial trend change dramatically? Let’s wait and see.</p></div></div></div></div>
-    <script src="static/idyll_index.js"></script>
-  </body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+    <title>Worldwide Console Game Sales</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Worldwide Console Sales</h1>
+        <h2>We pick Top 30 best-global-sales games in the graph. You could apply sliders and filters to find games!</h2>
+        <h3>Hover the bar to see detailed information!</h3>
+        <h5>Some old games do not have Metacritics score.</h5>
+        <h5>The dashed red line means the mean sales of all games presented in the chart. Enjoy!</h5>
+        <div class="row">
+            <!-- sliders -->
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <div class="slider_container">
+                    <p>
+                        <label for="yearAmount">Year range:</label>
+                        <input type="text" id="yearAmount" readonly
+                            style="border: 0; color: #f6931f; font-weight: bold" />
+                    </p>
+                    <div id="year-range"></div>
+                </div>
+                <div class="slider_container">
+                    <p>
+                        <label for="saleAmount">Sale range:</label>
+                        <input type="text" id="saleAmount" readonly
+                            style="border: 0; color: #f6931f; font-weight: bold" />
+                    </p>
+                    <div id="sale-range"></div>
+                </div>
+                <div class="slider_container">
+                    <p>
+                        <label for="criticsAmount">MC Critics range:</label>
+                        <input type="text" id="criticsAmount" readonly
+                            style="border: 0; color: #f6931f; font-weight: bold" />
+                    </p>
+                    <div id="critics-range"></div>
+                </div>
+                <div class="slider_container">
+                    <p>
+                        <label for="userAmount">MC User range:</label>
+                        <input type="text" id="userAmount" readonly
+                            style="border: 0; color: #f6931f; font-weight: bold" />
+                    </p>
+                    <div id="user-range"></div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6 col-xl-6">
+                <svg width="800" height="800" font-family="sans-serif" font-size="14"></svg>
+            </div>
+
+            <!--select menus-->
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <div class="span12 text-center" style="font-weight: 500; margin-bottom: 20px;">Choose Your Genre(s)</div>
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" id="action" />
+                        <label for="action"><img src="./images/action.png" /></label>
+                        <p style="text-align: center;">Action</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="shooter" />
+                        <label for="shooter"><img src="./images/shooter.png" /></label>
+                        <p style="text-align: center;">Shooter</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="sports" />
+                        <label for="sports"><img src="./images/sports.png" /></label>
+                        <p style="text-align: center;">Sports</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="platform" />
+                        <label for="platform"><img src="./images/platform.png" /></label>
+                        <p style="text-align: center;">Platform</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="racing" />
+                        <label for="racing"><img src="./images/racing.png" /></label>
+                        <p style="text-align: center;">Racing</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="role-playing-game" />
+                        <label for="role-playing-game"><img src="./images/role-playing-game.png" /></label>
+                        <p style="text-align: center;">Role Playing Game</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="puzzle" />
+                        <label for="puzzle"><img src="./images/puzzle.png" /></label>
+                        <p style="text-align: center;">Puzzle</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="simulation" />
+                        <label for="simulation"><img src="./images/simulation.png" /></label>
+                        <p style="text-align: center;">Simulation</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="fighting" />
+                        <label for="fighting"><img src="./images/fighting.png" /></label>
+                        <p style="text-align: center;">Fighting</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="adventure" />
+                        <label for="adventure"><img src="./images/adventure.png" /></label>
+                        <p style="text-align: center;">Adventure</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="strategy" />
+                        <label for="strategy"><img src="./images/strategy.png" /></label>
+                        <p style="text-align: center;">Strategy</p>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="misc" />
+                        <label for="misc"><img src="./images/other.png" /></label>
+                        <p style="text-align: center;">Others</p>
+                    </div>
+                </div>
+
+                <div class="span12 text-center" style="font-weight: 500; margin-top: 20px;">Choose Your Platform(s)</div>
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" id="ps4" />
+                        <label for="ps4"><img src="./images/ps4.png" /></label>
+                        <!-- <span>Action Game</span> -->
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="ps3" />
+                        <label for="ps3"><img src="./images/ps3.png" /></label>
+                        <!-- <span>Action Game</span> -->
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="ps2" />
+                        <label for="ps2"><img src="./images/ps2.png" /></label>
+                        <!-- <span>Action Game</span> -->
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="wii" />
+                        <label for="wii"><img src="./images/wii.png" /></label>
+                        <!-- <span>FPS Game</span> -->
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="xbox" />
+                        <label for="xbox"><img src="./images/xbox.png" /></label>
+                        <!-- <span>FPS Game</span> -->
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="old" />
+                        <label for="old"><img src="./images/other.png" /></label>
+                        <!-- <span>FPS Game</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <center>
+        <svg width="960" height="800" font-family="sans-serif" font-size="14"></svg>
+    </center> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+<script src="buttons.js"></script>
+<script>
+    var test;
+    $(function () {
+        $(function () {
+            $("#year-range").slider({
+                range: true,
+                min: 1980,
+                max: 2016,
+                values: [1980, 2016],
+                change: function (evnet, ui) {
+                    update()
+                },
+                slide: function (event, ui) {
+                    $("#yearAmount").val(ui.values[0] + " - " + ui.values[1]);
+                },
+            });
+            $("#yearAmount").val(
+                $("#year-range").slider("values", 0) +
+                " - " +
+                $("#year-range").slider("values", 1)
+            );
+        });
+        $(function () {
+            $("#sale-range").slider({
+                range: true,
+                min: 0,
+                max: 83,
+                values: [0.01, 83],
+                change: function (evnet, ui) {
+                    update()
+                },
+                slide: function (event, ui) {
+                    $("#saleAmount").val(ui.values[0] + " - " + ui.values[1]);
+                },
+            });
+            $("#saleAmount").val(
+                $("#sale-range").slider("values", 0) +
+                " - " +
+                $("#sale-range").slider("values", 1)
+            );
+        });
+        $(function () {
+            $("#critics-range").slider({
+                range: true,
+                min: 0,
+                max: 100,
+                values: [0, 100],
+                change: function (evnet, ui) {
+                    update()
+                },
+                slide: function (event, ui) {
+                    $("#criticsAmount").val(ui.values[0] + " - " + ui.values[1]);
+                },
+            });
+            $("#criticsAmount").val(
+                $("#critics-range").slider("values", 0) +
+                " - " +
+                $("#critics-range").slider("values", 1)
+            );
+        });
+        $(function () {
+            $("#user-range").slider({
+                range: true,
+                min: 0,
+                max: 10,
+                values: [0, 10],
+                change: function (evnet, ui) {
+                    update()
+                },
+                slide: function (event, ui) {
+                    $("#userAmount").val(ui.values[0] + " - " + ui.values[1]);
+                },
+            });
+            $("#userAmount").val(
+                $("#user-range").slider("values", 0) +
+                " - " +
+                $("#user-range").slider("values", 1)
+            );
+        });
+
+        var svg = d3.select("svg"),
+            width = +svg.attr("width"),
+            height = +svg.attr("height"),
+            innerRadius = 120,
+            outerRadius = Math.min(width, height) / 2.5,
+            g = svg
+                .append("g")
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        var xScaleOffset = (Math.PI * 75) / 180;
+        var x = d3
+            .scaleBand()
+            .range([xScaleOffset, 2 * Math.PI + xScaleOffset])
+            .align(0);
+
+        var y = d3.scaleLinear().range([innerRadius, outerRadius]);
+
+        var z = d3.scaleOrdinal().range(["#4e79a7", "#f28e2b", "#e15759", "#76B782"]);
+
+        var zClasses = ["US", "Europe", "Japan", "Others"];
+
+        d3.csv(
+            "./simple_stat.csv",
+            function (d, i, columns) {
+                d.NA_Sales = +d.NA_Sales;
+                d.EU_Sales = +d.EU_Sales;
+                d.JP_Sales = +d.JP_Sales;
+                d.Other_Sales = +d.Other_Sales;
+                return d;
+            },
+            function (error, data) {
+                if (error) throw error;
+                let columns = data.columns;
+                data = data.slice(0, 30);
+
+                var keys = columns.slice(1, 5);
+                var meanAccidents = d3.mean(data, function (d) {
+                    return d3.sum(keys, function (key) {
+                        return d[key];
+                    });
+                });
+
+                x.domain(
+                    data.map(function (d) {
+                        return d.Rank;
+                    })
+                );
+                y.domain([
+                    0,
+                    d3.max(data, function (d) {
+                        return d.NA_Sales + d.EU_Sales + d.JP_Sales + d.Other_Sales;
+                    }),
+                ]);
+                z.domain(columns.slice(1, 5));
+
+                let max = d3.max(data, function (d) {
+                    return d.NA_Sales + d.EU_Sales + d.JP_Sales + d.Other_Sales;
+                });
+                // Accidents
+                g.append("g")
+                    .selectAll("g")
+                    .data(d3.stack().keys(columns.slice(1, 5))(data))
+                    .enter()
+                    .append("g")
+                    .attr("fill", function (d) {
+                        return z(d.key);
+                    })
+                    .selectAll("path")
+                    .data(function (d) {
+                        return d;
+                    })
+                    .enter()
+                    .append("path")
+                    .attr(
+                        "d",
+                        d3
+                            .arc()
+                            .innerRadius(function (d) {
+                                return y(d[0]);
+                            })
+                            .outerRadius(function (d) {
+                                return y(d[1]);
+                            })
+                            .startAngle(function (d) {
+                                return x(d.data.Rank);
+                            })
+                            .endAngle(function (d) {
+                                return x(d.data.Rank) + x.bandwidth();
+                            })
+                            .padAngle(0.01)
+                            .padRadius(innerRadius)
+                    );
+
+                //yAxis and Mean
+                //g.exit().remove();
+                g.selectAll("path")
+                    .on("mouseover", function (d) {
+
+                        var delta = d.y1 - d.y0;
+                        var xPos = parseFloat(event.pageX);
+                        var yPos = parseFloat(event.pageY);
+                        var height = parseFloat(d3.select(this).attr("height"))
+                        d3.select(this).attr("stroke", "blue").attr("stroke-width", 0.8);
+                        d3.select(this).transition()
+                            .duration('50')
+                            .attr('opacity', '.85');
+                        let name = d.data.Name;
+                        let year = d.data.Year_of_Release;
+                        let genre = d.data.Genre;
+                        let platform = d.data.Platform;
+                        let publisher = d.data.Publisher;
+                        let na_sales = d.data.NA_Sales;
+                        let eu_sales = d.data.EU_Sales;
+                        let jp_sales = d.data.JP_Sales;
+                        let other_sales = d.data.Other_Sales
+                        let global = d.data.Global_Sales;
+                        let mc_c = d.data.Critic_Score;
+                        let mc_u = d.data.User_Score;
+                        console.log(mc_u);
+                        svg.append("text")
+                            .attr("y", "100")
+                            .attr("x", "0")
+                            .attr("class", "hover")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                let name_year = name+" " + year + " (" + platform +")";
+                                return name_year;
+                            })
+                        svg.append("text")
+                            .attr("y", "120")
+                            .attr("x", "0")
+                            .attr("class", "hover2")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                let genre_publisher = genre+" ("+publisher+")";
+                                return genre_publisher;
+                            })
+                        svg.append("text")
+                            .attr("y", "140")
+                            .attr("x", "0")
+                            .attr("class", "hover3")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "North America: "+na_sales+" Europe: "+eu_sales;
+                            })
+                        svg.append("text")
+                            .attr("y", "160")
+                            .attr("x", "0")
+                            .attr("class", "hover4")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "Japan: "+jp_sales+" Others: "+other_sales;
+                            })
+                        svg.append("text")
+                            .attr("y", "180")
+                            .attr("x", "0")
+                            .attr("class", "hover5")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "Total: "+global;
+                            })
+                            svg.append("text")
+                            .attr("y", "200")
+                            .attr("x", "0")
+                            .attr("class", "hover6")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "Metacritics Critics Score: "+mc_c;
+                            })
+                            svg.append("text")
+                            .attr("y", "220")
+                            .attr("x", "0")
+                            .attr("class", "hover7")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "Metacritics Users Score: "+mc_u;
+                            })
+
+                            
+
+                    })
+                    .on("mouseout", function () {
+                        svg.select("text.hover").remove();
+                        svg.select("text.hover2").remove();
+                        svg.select("text.hover3").remove();
+                        svg.select("text.hover4").remove();
+                        svg.select("text.hover5").remove();
+                        svg.select("text.hover6").remove();
+                        svg.select("text.hover7").remove();
+                        d3.select(this).attr("stroke", "pink").attr("stroke-width", 0.2);
+                        d3.select(this).transition()
+                            .duration('50')
+                            .attr('opacity', '1');
+                    })
+
+                var yAxis = g.append("g").attr("text-anchor", "middle");
+
+                var yTicksValues = d3.ticks(0, max, 4);
+
+                // Mean value line
+                var yMeanTick = yAxis.append("g").datum([meanAccidents]);
+
+                yMeanTick
+                    .append("circle")
+                    .attr("fill", "none")
+                    .attr("stroke", "#C0625E")
+                    .attr("stroke-dasharray", "5 3")
+                    .attr("r", y);
+
+                var yTick = yAxis.selectAll("g").data(yTicksValues).enter().append("g");
+
+                yTick
+                    .append("circle")
+                    .attr("fill", "none")
+                    .attr("stroke", "#ccdcea")
+                    .attr("r", y);
+
+                yTick
+                    .append("text")
+                    .attr("y", function (d) {
+                        return -y(d);
+                    })
+                    .attr("dy", "0.25em")
+                    .attr("fill", "none")
+                    .attr("stroke", "#fff")
+                    .attr("stroke-width", 5)
+                    .text(y.tickFormat(5, "s"));
+
+                yTick
+                    .append("text")
+                    .attr("y", function (d) {
+                        return -y(d);
+                    })
+                    .attr("dy", "0.25em")
+                    .text(y.tickFormat(5, "s"));
+
+                yAxis
+                    .append("text")
+                    .attr("y", function (d) {
+                        return -y(yTicksValues.pop());
+                    })
+                    .attr("dy", "-4em")
+                    .text("Sales (in million)");
+
+                // Labels for xAxis
+
+                var label = g
+                    .append("g")
+                    .selectAll("g")
+                    .data(data)
+                    .enter()
+                    .append("g")
+                    .attr("text-anchor", "middle")
+                    .attr("transform", function (d) {
+                        return (
+                            "rotate(" +
+                            (((x(d.Rank) + x.bandwidth() / 2) * 180) / Math.PI - 90) +
+                            ")translate(" +
+                            (y(d.Global_Sales) + 10) +
+                            ",0)"
+                        );
+                    });
+
+                label
+                    .append("text")
+                    .attr("transform", function (d) {
+                        return (x(d.Rank) + x.bandwidth() / 2 + Math.PI / 2) %
+                            (2 * Math.PI) <
+                            Math.PI
+                            ? "rotate(90)"
+                            : "rotate(-90)";
+                    })
+                    .text(function (d) {
+                        var xlabel = d.Global_Sales;
+                        return xlabel;
+                    }).style("font-size", "12px")
+                    .attr("alignment-baseline", "middle");
+
+                // Legend
+                var legend = g
+                    .append("g")
+                    .selectAll("g")
+                    .data(zClasses)
+                    .enter()
+                    .append("g")
+                    .attr("transform", function (d, i) {
+                        return (
+                            "translate(-50," + (i - (zClasses.length - 1) / 2) * 25 + ")"
+                        );
+                    });
+
+                legend.append("circle").attr("r", 8).attr("fill", z);
+
+                legend
+                    .append("text")
+                    .attr("x", 15)
+                    .attr("y", 0)
+                    .attr("dy", "0.35em")
+                    .text(function (d) {
+                        return d;
+                    });
+            }
+
+        );
+        d3.select("#action").on("change", update);
+        d3.select("#shooter").on("change", update);
+        d3.select("#sports").on("change", update);
+        d3.select("#platform").on("change", update);
+        d3.select("#racing").on("change", update);
+        d3.select("#role-playing-game").on("change", update);
+        d3.select("#puzzle").on("change", update);
+        d3.select("#simulation").on("change", update);
+        d3.select("#fighting").on("change", update);
+        d3.select("#adventure").on("change", update);
+        d3.select("#strategy").on("change", update);
+        d3.select("#misc").on("change", update);
+
+        d3.select("#wii").on("change", update);
+        d3.select("#ps4").on("change", update);
+        d3.select("#ps3").on("change", update);
+        d3.select("#ps2").on("change", update);
+        d3.select("#xbox").on("change", update);
+        d3.select("#old").on("change", update);
+
+        function update() {
+            console.log($("#year-range").slider("values", 0))
+            d3.csv(
+                "./simple_stat.csv",
+                function (d, i, columns) {
+                    d.NA_Sales = +d.NA_Sales;
+                    d.EU_Sales = +d.EU_Sales;
+                    d.JP_Sales = +d.JP_Sales;
+                    d.Other_Sales = +d.Other_Sales;
+                    return d;
+                },
+                function (error, data) {
+                    if (error) throw error;
+                    let columns = data.columns;
+                    data = data.filter(function (d, i) {
+                        let genre = false
+                        let platform = false;
+                        let checkGenre = false;
+                        let checkPlatform = false;
+
+                        let year = true;
+                        let sale = true;
+                        let critics = true;
+                        let user = true;
+
+                        if (d["Year_of_Release"] < $("#year-range").slider("values", 0) || d["Year_of_Release"] > $("#year-range").slider("values", 1)) {
+                            year = false;
+                        }
+                        if (d["Global_Sales"] < $("#sale-range").slider("values", 0) || d["Global_Sales"] > $("#sale-range").slider("values", 1)) {
+                            sale = false;
+                        }
+                        if (isNaN(d["Critic_Score"]) || d["Critic_Score"] < $("#critics-range").slider("values", 0) || d["Critic_Score"] > $("#critics-range").slider("values", 1)) {
+                            critics = false;
+                        }
+                        if (isNaN(d["User_Score"]) || d["User_Score"] < $("#user-range").slider("values", 0) || d["User_Score"] > $("#user-range").slider("values", 1)) {
+                            user = false;
+                        }
+
+                        if (d3.select("#action").property("checked")) {
+                            genre = genre || d["Genre"] == "Action";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#shooter").property("checked")) {
+                            genre = genre || d["Genre"] == "Shooter";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#sports").property("checked")) {
+                            genre = genre || d["Genre"] == "Sports";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#platform").property("checked")) {
+                            genre = genre || d["Genre"] == "Platform";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#racing").property("checked")) {
+                            genre = genre || d["Genre"] == "Racing";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#role-playing-game").property("checked")) {
+                            genre = genre || d["Genre"] == "Role-Playing";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#puzzle").property("checked")) {
+                            genre = genre || d["Genre"] == "Puzzle";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#simulation").property("checked")) {
+                            genre = genre || d["Genre"] == "Simulation";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#fighting").property("checked")) {
+                            genre = genre || d["Genre"] == "Fighting";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#adventure").property("checked")) {
+                            genre = genre || d["Genre"] == "Adventure";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#strategy").property("checked")) {
+                            genre = genre || d["Genre"] == "Strategy";
+                            checkGenre = true;
+                        }
+                        if (d3.select("#misc").property("checked")) {
+                            genre = genre || d["Genre"] == "Misc";
+                            checkGenre = true;
+                        }
+
+                        if (d3.select("#wii").property("checked")) {
+                            platform = platform || d["Platform"] == "Wii";
+                            checkPlatform = true;
+                        }
+                        if (d3.select("#ps4").property("checked")) {
+                            platform = platform || d["Platform"] == "PS4";
+                            checkPlatform = true;
+                        }
+                        if (d3.select("#ps3").property("checked")) {
+                            platform = platform || d["Platform"] == "PS3";
+                            checkPlatform = true;
+                        }
+                        if (d3.select("#ps2").property("checked")) {
+                            platform = platform || d["Platform"] == "PS2";
+                            checkPlatform = true;
+                        }
+                        if (d3.select("#xbox").property("checked")) {
+                            platform = platform || d["Platform"] == "X360";
+                            checkPlatform = true;
+                        }
+                        if (d3.select("#old").property("checked")) {
+                            platform = platform || d["Platform"] == "SNES" || d["Platform"] == "NES" || d["Platform"] == "DS" || d["Platform"] == "GB";
+                            checkPlatform = true;
+                        }
+                        if (!year) {
+                            return year;
+                        } else if (!sale) {
+                            return sale;
+                        } else if (!critics) {
+                            return critics;
+                        } else if (!user) {
+                            return user;
+                        }  
+                        if (checkPlatform || checkGenre) {
+                            return (platform || !checkPlatform) && (genre || !checkGenre);
+                        } else {
+                            return d;
+                        }
+                    }).sort(function (a, b) {
+                        var nameA = parseFloat(a.Global_Sales);
+                        var nameB = parseFloat(b.Global_Sales);
+                        if (nameA < nameB) {
+                            return 1;
+                        }
+                        if (nameA > nameB) {
+                            return -1;
+                        }
+
+                        // names must be equal
+                        return 0;
+                    }).slice(0, 30);;
+                    //data.push(columns);
+                    var keys = columns.slice(1, 5);
+                    var meanAccidents = d3.mean(data, function (d) {
+                        return d3.sum(keys, function (key) {
+                            return d[key];
+                        });
+                    });
+
+                    x.domain(
+                        data.map(function (d) {
+                            return d.Rank;
+                        })
+                    );
+                    y.domain([
+                        0,
+                        d3.max(data, function (d) {
+                            return d.NA_Sales + d.EU_Sales + d.JP_Sales + d.Other_Sales;
+                        }),
+                    ]);
+                    let max = d3.max(data, function (d) {
+                        return d.NA_Sales + d.EU_Sales + d.JP_Sales + d.Other_Sales;
+                    });
+                    z.domain(columns.slice(1, 5));
+
+                    g.selectAll("g").remove();
+                    // Accidents
+                    g.append("g")
+                        .selectAll("g")
+                        .data(d3.stack().keys(columns.slice(1, 5))(data))
+                        .enter()
+                        .append("g")
+                        .attr("fill", function (d) {
+                            return z(d.key);
+                        })
+                        .selectAll("path")
+                        .data(function (d) {
+                            return d;
+                        })
+                        .enter()
+                        .append("path")
+                        .attr(
+                            "d",
+                            d3
+                                .arc()
+                                .innerRadius(function (d) {
+                                    return y(d[0]);
+                                })
+                                .outerRadius(function (d) {
+                                    return y(d[1]);
+                                })
+                                .startAngle(function (d) {
+                                    return x(d.data.Rank);
+                                })
+                                .endAngle(function (d) {
+                                    return x(d.data.Rank) + x.bandwidth();
+                                })
+                                .padAngle(0.01)
+                                .padRadius(innerRadius)
+                        );
+
+                    g.exit().remove();
+                    //yAxis and Mean
+
+
+                    g.selectAll("path")
+                    .on("mouseover", function (d) {
+
+                        var delta = d.y1 - d.y0;
+                        var xPos = parseFloat(event.pageX);
+                        var yPos = parseFloat(event.pageY);
+                        var height = parseFloat(d3.select(this).attr("height"))
+                        d3.select(this).attr("stroke", "blue").attr("stroke-width", 0.8);
+                        d3.select(this).transition()
+                            .duration('50')
+                            .attr('opacity', '.85');
+                        let name = d.data.Name;
+                        let year = d.data.Year_of_Release;
+                        let genre = d.data.Genre;
+                        let platform = d.data.Platform;
+                        let publisher = d.data.Publisher;
+                        let na_sales = d.data.NA_Sales;
+                        let eu_sales = d.data.EU_Sales;
+                        let jp_sales = d.data.JP_Sales;
+                        let other_sales = d.data.Other_Sales
+                        let global = d.data.Global_Sales;
+                        let mc_c = d.data.Critic_Score;
+                        let mc_u = d.data.User_Score;
+                        svg.append("text")
+                            .attr("y", "100")
+                            .attr("x", "0")
+                            .attr("class", "hover")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                let name_year = name+" " + year + " (" + platform +")";
+                                return name_year;
+                            })
+                        svg.append("text")
+                            .attr("y", "120")
+                            .attr("x", "0")
+                            .attr("class", "hover2")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                let genre_publisher = genre+" ("+publisher+")";
+                                return genre_publisher;
+                            })
+                        svg.append("text")
+                            .attr("y", "140")
+                            .attr("x", "0")
+                            .attr("class", "hover3")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "North America: "+na_sales+" Europe: "+eu_sales;
+                            })
+                        svg.append("text")
+                            .attr("y", "160")
+                            .attr("x", "0")
+                            .attr("class", "hover4")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "Japan: "+jp_sales+" Others: "+other_sales;
+                            })
+                        svg.append("text")
+                            .attr("y", "180")
+                            .attr("x", "0")
+                            .attr("class", "hover5")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "Total: "+global;
+                            })
+                            svg.append("text")
+                            .attr("y", "200")
+                            .attr("x", "0")
+                            .attr("class", "hover6")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "Metacritics Critics Score: "+mc_c;
+                            })
+                            svg.append("text")
+                            .attr("y", "220")
+                            .attr("x", "0")
+                            .attr("class", "hover7")
+                            .attr("font-family", "sans-serif")
+                            .attr("font-size", "12px")
+                            .style("fill", "black")
+                            .text(function (d) {
+                                //let name_year = name+year;
+                                return "Metacritics Users Score: "+mc_u;
+                            })
+
+                            
+
+                    })
+                    .on("mouseout", function () {
+                        svg.select("text.hover").remove();
+                        svg.select("text.hover2").remove();
+                        svg.select("text.hover3").remove();
+                        svg.select("text.hover4").remove();
+                        svg.select("text.hover5").remove();
+                        svg.select("text.hover6").remove();
+                        svg.select("text.hover7").remove();
+                        d3.select(this).attr("stroke", "pink").attr("stroke-width", 0.2);
+                        d3.select(this).transition()
+                            .duration('50')
+                            .attr('opacity', '1');
+                    })
+
+                    var yAxis = g.append("g").attr("text-anchor", "middle");
+
+                    var yTicksValues = d3.ticks(0, max, 4);
+
+                    // Mean value line
+                    var yMeanTick = yAxis.append("g").datum([meanAccidents]);
+
+                    yMeanTick
+                        .append("circle")
+                        .attr("fill", "none")
+                        .attr("stroke", "#C0625E")
+                        .attr("stroke-dasharray", "5 3")
+                        .attr("r", y);
+
+                    var yTick = yAxis.selectAll("g").data(yTicksValues).enter().append("g");
+
+                    yTick
+                        .append("circle")
+                        .attr("fill", "none")
+                        .attr("stroke", "#ccdcea")
+                        .attr("r", y);
+
+                    yTick
+                        .append("text")
+                        .attr("y", function (d) {
+                            return -y(d);
+                        })
+                        .attr("dy", "0.25em")
+                        .attr("fill", "none")
+                        .attr("stroke", "#fff")
+                        .attr("stroke-width", 5)
+                        .text(y.tickFormat(5, "s"));
+
+                    yTick
+                        .append("text")
+                        .attr("y", function (d) {
+                            return -y(d);
+                        })
+                        .attr("dy", "0.25em")
+                        .text(y.tickFormat(5, "s"));
+
+                    yAxis
+                        .append("text")
+                        .attr("y", function (d) {
+                            return -y(yTicksValues.pop());
+                        })
+                        .attr("dy", "-4em")
+                        .text("Sales (in million)");
+
+                    // Labels for xAxis
+
+                    var label = g
+                        .append("g")
+                        .selectAll("g")
+                        .data(data)
+                        .enter()
+                        .append("g")
+                        .attr("text-anchor", "middle")
+                        .attr("transform", function (d) {
+                            return (
+                                "rotate(" +
+                                (((x(d.Rank) + x.bandwidth() / 2) * 180) / Math.PI - 90) +
+                                ")translate(" +
+                                (y(d.Global_Sales) + 10) +
+                                ",0)"
+                            );
+                        });
+
+                    label
+                        .append("text")
+                        .attr("transform", function (d) {
+                            return (x(d.Rank) + x.bandwidth() / 2 + Math.PI / 2) %
+                                (2 * Math.PI) <
+                                Math.PI
+                                ? "rotate(90)"
+                                : "rotate(-90)";
+                        })
+                        .text(function (d) {
+                            var xlabel = d.Global_Sales;
+                            return xlabel;
+                        }).style("font-size", "12px")
+                        .attr("alignment-baseline", "middle");
+
+                    // Legend
+                    var legend = g
+                        .append("g")
+                        .selectAll("g")
+                        .data(zClasses)
+                        .enter()
+                        .append("g")
+                        .attr("transform", function (d, i) {
+                            return (
+                                "translate(-50," + (i - (zClasses.length - 1) / 2) * 25 + ")"
+                            );
+                        });
+
+                    legend.append("circle").attr("r", 8).attr("fill", z);
+
+                    legend
+                        .append("text")
+                        .attr("x", 15)
+                        .attr("y", 0)
+                        .attr("dy", "0.35em")
+                        .text(function (d) {
+                            return d;
+                        });
+
+                    g.append("g")
+                        .selectAll("g")
+                        .data(d3.stack().keys(columns.slice(1))(data)).exit().remove();
+                });
+        }
+    })
+
+</script>
+<style>
+    .container-fluid {
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: aliceblue;
+    }
+
+    input[type="text"],
+    textarea {
+        background-color: aliceblue;
+    }
+
+    /* input[type="checkbox"] {
+        display: none;
+    } */
+    .slider_container {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 50px;
+        max-width: 600px;
+        /* or 950px */
+    }
+
+    img {
+        max-width: 70px;
+        /* border:solid 1px red; margin:10px; */
+    }
+</style>
+
 </html>
